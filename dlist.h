@@ -2,7 +2,10 @@
 #include <cstring>
 #include <cctype>
 #include <cstdlib>
+#include <ctime>
+
 using namespace std;
+
 
 
 struct node
