@@ -43,5 +43,23 @@ void dlist::display() {
 
 void dlist::removefl()
 {
+  node* temp = head;
+  node* temp2 = tail;
   //remove first and last
+
+  //base case
+  if(temp != head && temp2 != tail)
+  {
+    //this if should mean they were deleted but temp is still set to head and tail above so during recursion im fucked
+    
+  }
+  else
+  {
+    //see idk if i can do this in one 
+
+
+
+    //recursion
+    removefl();
+  }
 }
