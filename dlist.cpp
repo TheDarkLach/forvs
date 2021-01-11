@@ -44,15 +44,16 @@ void dlist::display() {
 
 void dlist::reverse()
 { 
-   if(head == NULL)
+  node* current;
+   if(current == head->next)
    {
-     //
+     cout << "woo";
    }
    else
    {
-     node* temp = tail;
-     cout << temp->data << " ";
+     current = tail;
      tail = tail->previous;
+     cout<< current->data<<" ";
      reverse();
    }
 }
