@@ -13,7 +13,8 @@ dlist::~dlist() {
   }
 }
 
-void dlist::build() {
+void dlist::build() 
+{
   srand((unsigned)time(0));
   node* current = new node();
   current->data = (rand()%10 + 1);
@@ -41,25 +42,17 @@ void dlist::display() {
   cout << endl;
 }
 
-void dlist::removefl()
-{
-  node* temp = head;
-  node* temp2 = tail;
-  //remove first and last
-
-  //base case
-  if(temp != head && temp2 != tail)
-  {
-    //this if should mean they were deleted but temp is still set to head and tail above so during recursion im fucked
-    
-  }
-  else
-  {
-    //see idk if i can do this in one 
-
-
-
-    //recursion
-    removefl();
-  }
+void dlist::reverse()
+{ 
+   if(head == NULL)
+   {
+     //
+   }
+   else
+   {
+     node* temp = tail;
+     cout << temp->data << " ";
+     tail = tail->previous;
+     reverse();
+   }
 }

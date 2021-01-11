@@ -27,7 +27,8 @@ class dlist
 
      /* *****************YOUR TURN! ******************************** */
      /* place your prototype here */
-        void removefl();
+        void reverse();
+        
      private:
          node * head;   //notice there is both a head
          node * tail;   //and a tail, common for DLL
