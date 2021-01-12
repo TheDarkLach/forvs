@@ -3,14 +3,13 @@
 
 int main()
 {
-    node* head = NULL;
 
     dlist object;
     object.build();
     object.display();
 
     //PLEASE PUT YOUR CODE HERE to call the function assigned
-    object.reverse();
+    object.removefl(object.getHead(), false);
 
     object.display();
 

@@ -27,7 +27,12 @@ class dlist
 
      /* *****************YOUR TURN! ******************************** */
      /* place your prototype here */
-        void reverse();
+        void removefl(node* current_node, bool edited_head);
+        
+        node* getHead()
+        {
+           return head;
+        }
         
      private:
          node * head;   //notice there is both a head

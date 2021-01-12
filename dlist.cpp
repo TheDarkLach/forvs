@@ -42,18 +42,29 @@ void dlist::display() {
   cout << endl;
 }
 
-void dlist::reverse()
-{ 
-  node* current;
-   if(current == head->next)
-   {
-     cout << "woo";
-   }
-   else
-   {
-     current = tail;
-     tail = tail->previous;
-     cout<< current->data<<" ";
-     reverse();
-   }
+void dlist::removefl(node* current_node, bool edited_head)
+{
+	if(!edited_head)
+	{
+		node* new_head = head->next;
+		head           = new_head;
+		head->previous = NULL;
+		
+		dlist::removefl(head->next, true);
+	}
+	else if(current_node == tail)
+	{
+		node* new_tail = tail->previous;
+		tail           = new_tail;
+		tail->next     = NULL;
+		
+		//head->previous = tail;
+		//tail->next     = head;
+		
+		return;
+	}
+	else
+	{
+		dlist::removefl(current_node->next, true);
+	}
 }
